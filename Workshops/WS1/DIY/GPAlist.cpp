@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
+#include <algorithm>
 #include "GPAlist.h"
 #include "GPA.h"
 //#include "UI.h"

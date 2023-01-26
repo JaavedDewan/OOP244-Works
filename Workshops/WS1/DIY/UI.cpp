@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "UI.h"
 #include "GPAlist.h"
 #include "GPA.h"
