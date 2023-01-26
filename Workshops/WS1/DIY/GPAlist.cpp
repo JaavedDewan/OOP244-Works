@@ -11,6 +11,7 @@
 //#include "UI.h"
 //#include "File.h"
 using namespace std;
+using namespace sdds;
 
 //Global array of structure GPA
 GPA averages[87];
