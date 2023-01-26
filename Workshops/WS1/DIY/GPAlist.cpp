@@ -48,12 +48,13 @@ bool sdds::gpaQuery(const char* filename)
 
 		if (op == '!') {
 
-			cout << "Exit the Program? (Y)es/(N)o: ";
+			cout << "Exit the program? (Y)es/(N)o: ";
 			cin >> exit;
 
 			//If the user enters 'y' then the program will exit
 
 			if (exit == 'y') {
+				cout << "Goodbye!" << endl;
 				break;
 			}
 
@@ -90,7 +91,7 @@ bool sdds::gpaQuery(const char* filename)
 			cout << "value : GPA value" << endl << endl;
 		}
 	}
-	return true;
+	return false;
 }
 
 
@@ -178,7 +179,7 @@ void sdds::displayGPA(char op, double gpa) {
 				count++; // increment count
 
 				cout << "[" << count << "] " << averages[i].stno << ": ";
-				cout << averages[i].gpa;
+				printf("%2.1lf", averages[i].gpa);
 				cout << " (" << Names << ") " << endl;
 
 			}
@@ -195,7 +196,7 @@ void sdds::displayGPA(char op, double gpa) {
 				count++; // increment count
 
 				cout << "[" << count << "] " << averages[i].stno << ": ";
-				cout << averages[i].gpa;
+				printf("%2.1lf", averages[i].gpa);
 				cout << " (" << Names << ") " << endl;
 
 			}
@@ -210,7 +211,7 @@ void sdds::displayGPA(char op, double gpa) {
 				count++; // increment count
 
 				cout << "[" << count << "] " << averages[i].stno << ": ";
-				cout << averages[i].gpa;
+				printf("%2.1lf", averages[i].gpa);
 				cout << " (" << Names << ") " << endl;
 			}
 		}
