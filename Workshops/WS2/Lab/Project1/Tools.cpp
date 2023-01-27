@@ -60,6 +60,7 @@ namespace sdds {
         read = fscanf(fp, "%d,", &intMembers);
         return read;
     }
+
     
     // Reads a double from the currently opened file and stores it in the given hours variable
 // Returns the number of items successfully read

@@ -111,7 +111,7 @@ namespace sdds {
             }
         }
     }
-
+    
 
     // ADD [1]: implement the display function based on the following condition: (timeinhours > 1.0 and dayofweek == 'F') 
 
