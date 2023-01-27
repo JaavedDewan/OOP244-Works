@@ -43,20 +43,28 @@ namespace sdds {
     
 
     int read(char* name) {
-        return fscanf(fp, "%60[^\n]\n", name);
+        int read = 0;
+        read = fscanf(fp, "%60[^\n]\n", name);
+        return read;
     }
 
-    int read(int& flag) {
-        return fscanf(fp, "%d", &flag);
+    int read(int& result) {
+        int read = 0;
+        read = fscanf(fp, "%d", &result);
+        return read;
 
     }
 
     int read(double& timeinhours) {
-        return fscanf(fp, "%lf", &timeinhours);
+        int read = 0;
+        read =fscanf(fp, "%lf", &timeinhours);
+        return read;
     }
 
     int read(char& dayofweek) {
-        return fscanf(fp, " %c", &dayofweek);
+        int read = 0;
+        read = fscanf(fp, " %c", &dayofweek);
+        return read;
     }
 
     

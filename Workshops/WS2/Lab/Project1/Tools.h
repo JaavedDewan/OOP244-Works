@@ -25,7 +25,7 @@ namespace sdds {
 
 	int read(char* name);
 
-	int read(int& flag);
+	int read(int& result);
 
 	int read(double& timeinhours);
 
