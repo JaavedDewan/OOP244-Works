@@ -40,34 +40,46 @@ namespace sdds {
     // To Do: read functions (4 overloaded read functions)
 
 
-    
+    // Reads a string from the currently opened file and stores it in the given name variable
+// Returns the number of items successfully read
 
-    int read(char* name) {
+    int read(char* name)
+    {
         int read = 0;
         read = fscanf(fp, "%60[^\n]\n", name);
         return read;
     }
 
-    int read(int& result) {
-        int read = 0;
-        read = fscanf(fp, "%d", &result);
-        return read;
+    // Reads an integer from the currently opened file and stores it in the given intMembers variable
+// Returns the number of items successfully read
 
-    }
 
-    int read(double& timeinhours) {
+    int read(int& intMembers)
+    {
         int read = 0;
-        read =fscanf(fp, "%lf", &timeinhours);
+        read = fscanf(fp, "%d,", &intMembers);
         return read;
     }
-
-    int read(char& dayofweek) {
-        int read = 0;
-        read = fscanf(fp, " %c", &dayofweek);
-        return read;
-    }
-
     
+    // Reads a double from the currently opened file and stores it in the given hours variable
+// Returns the number of items successfully read
+
+    int read(double& hours)
+    {
+        int read = 0;
+        read = fscanf(fp, "%lf,", &hours);
+        return read;
+    }
+
+    // Reads a single character from the currently opened file and stores it in the given weekName variable
+// Returns the number of items successfully read
+
+    int read(char& weekName)
+    {
+        int read = 0;
+        read = fscanf(fp, "%[^ \t\n\r\v\f,]%*c", &weekName);
+        return read;
+    }
 
     void closefile() { // Fully provided
         if (fp) fclose(fp);

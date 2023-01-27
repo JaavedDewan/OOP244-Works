@@ -22,7 +22,7 @@ piece of work is entirely of my own creation.
 using namespace std;
 namespace sdds {
     int no_of_traces;
-    Customers* users;
+    Customers *users;
 
     // Add: Complete the implementation of the no argument [int loadTraces()] function
     int loadTraces() {       // Do: complete the missing parts as guided (6 parts)
@@ -46,16 +46,17 @@ namespace sdds {
             }
 
             // Add [4]: If the number of the records does not match the number of read ones, print an error message
-            if (no_of_traces != i) {
+            if (i != no_of_traces) {
+
                 cout << "Error reading the records, Check the data file " << endl;
-                check = false;
+                /*check = false;*/
             }
             else {
 
                 check = true;
 
             }
-
+            // Close the file to release resources
             closefile();
 
         }
@@ -88,7 +89,10 @@ namespace sdds {
             strcpy(user_info.Package_Name, read_Package_name);
 
             // Add [3]: set  check to true if the previous process is successfully completed
-            check = true;
+            if (user_info.Package_Name != nullptr) {
+
+                check = true;
+            }
         }
         return check;
     }
@@ -113,8 +117,12 @@ namespace sdds {
 
     void display() {
         for (int i = 0; i < no_of_traces; i++) {
-            if (users[i].timeinhours > 1.0 && users[i].dayofweek == 'f') {
-                cout << users[i].user_id << "," << users[i].timeinhours << "," << users[i].dayofyear << "," << users[i].Fwifitime << "," << users[i].Package_Name << endl;
+
+            // If both conditions are met, it prints out the user's ID, time in hours, Fctime, Fwifitime, and package name
+
+            if (users[i].timeinhours > 1.0 && users[i].dayofweek == 'F') {
+                cout << users[i].user_id << "," << users[i].timeinhours << "," << users[i].Fctime << "," << users[i].Fwifitime << "," << users[i].Package_Name << endl;
+                // The loop continues until all elements in the array have been checked and the function ends.
             }
         }
     }
@@ -127,6 +135,7 @@ namespace sdds {
             delete[] users[i].Package_Name;
         }
         delete[] users;
+        users = nullptr;
     }
 
 }

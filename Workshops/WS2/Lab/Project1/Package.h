@@ -21,7 +21,7 @@ piece of work is entirely of my own creation.
 namespace sdds {
 
     struct Customers {
-        char* Package_Name;
+        char *Package_Name;
         int user_id;
         double timeinhours;
         int dayofyear;
@@ -32,7 +32,7 @@ namespace sdds {
 
     int loadTraces(); // loads a customers structure with its values from the file
 
-    int loadTraces(Customers& user); // allocates dynamic array of customers and loads all the file records into the array.
+    int loadTraces(Customers& user_info); // allocates dynamic array of customers and loads all the file records into the array.
 
     void grouptTraces(); //Group the dynamic array of records based on the user id of customers.
 
