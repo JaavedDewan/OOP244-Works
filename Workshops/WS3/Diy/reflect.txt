@@ -1,6 +1,6 @@
 /*
 *****************************************************************************
-<assessment name example: Workshop - #1 (Part-2)>
+<assessment name example: Workshop - #3 (Part-2)>
 Full Name : Jaaved Dewan
 Student ID#: 126045178
 Email : jdewan@myseneca.ca or jilred15@gmail.com
