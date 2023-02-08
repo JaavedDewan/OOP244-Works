@@ -1,1 +1,22 @@
-This workshop helped me improve my use of cin and cout as well as dynamically allocating memory into and from structures. This is also helped me understand the empty records and input values much more. As for the lab portion of this workshop, what caught me off guard was that for the program to read the file and properly display, it required the fscanf function to be stored in a variable and that variable is the one to be returned to the main program. This workshop helped in terms of formatting cin and cout, dynamic memory allocation as well as deallocating to prevent memory leak. Furthermore, this helps with foolproof data entry by even creating a function making use of an empty input. Finally, I personally think I need more practice for these workshops but I think I am improving compared to the first one. Also, I did find this one much easier than workshop 1. I still need to bring for the concepts of pointing, dynamic allocating and just more practise for me to be able to write these codes more faster and efficiently.
+/*
+*****************************************************************************
+<assessment name example: Workshop - #2 (Part-2)>
+Full Name : Jaaved Dewan
+Student ID#: 126045178
+Email : jdewan@myseneca.ca or jilred15@gmail.com
+Section : NAA
+Completed on: 02/01/23
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+This workshop helped me improve my use of cin and cout as well as dynamically allocating memory into and from structures. 
+This is also helped me understand the empty records and input values much more. 
+As for the lab portion of this workshop, what caught me off guard was that for the program to read the file and properly display, it required the fscanf function to be stored in a variable and that variable is the one to be returned to the main program. 
+This workshop helped in terms of formatting cin and cout, dynamic memory allocation as well as deallocating to prevent memory leak. 
+Furthermore, this helps with foolproof data entry by even creating a function making use of an empty input. 
+Finally, I personally think I need more practice for these workshops but I think I am improving compared to the first one. Also, I did find this one much easier than workshop 1. 
+I still need to bring for the concepts of pointing, dynamic allocating and just more practise for me to be able to write these codes more faster and efficiently.
