@@ -63,23 +63,23 @@ void Store::display() const
     if (m_sName[0] == '\0')
     {
         // Display "Invalid Store"
-        std::cout << "Invalid Store" << std::endl;
+        std::cout << "Invalid Store" << endl;
     }
     else
     {
         // Display the store information
-        std::cout << std::setfill('*') << std::setw(60) << "*" << std::endl;
-        std::cout << m_sName << std::endl;
-        std::cout << std::setfill('*') << std::setw(60) << "*" << std::endl;
-        std::cout << "list of the toys" << std::endl;
-        std::cout << std::setfill(' ') << std::setw(30) << "SKU";
-        std::cout << std::setw(10) << "Age";
-        std::cout << std::setw(11) << "Price";
-        std::cout << std::setw(10) << "Sale" << std::endl;
+        cout << setfill('*') << setw(60) << "*" << endl;
+        cout << m_sName << endl;
+        cout << setfill('*') << setw(60) << "*" << endl;
+        cout << "list of the toys" << endl;
+        cout << setfill(' ') << setw(30) << "SKU";
+        cout << setw(10) << "Age";
+        cout << setw(11) << "Price";
+        cout << setw(10) << "Sale" << endl;
         // Display the information about each toy
         for (int i = 0; i < m_addToys; i++)
         {
-            std::cout << "Toy[" << i + 1 << "] :";
+            cout << "Toy[" << i + 1 << "] :";
             m_toy[i].display();
         }
     }

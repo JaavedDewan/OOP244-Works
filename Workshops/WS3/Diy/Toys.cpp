@@ -63,25 +63,25 @@ namespace sdds {
         // Check if the toy is valid
         if (m_tname[0] != '\0' && len_sku.length() == 8 && m_price >= 0 && m_age >= 0) {
             // Align the text to the left for the toy name and align the values to the right for the rest of the data
-            std::cout << std::left << std::setw(15) << m_tname;
-            std::cout << std::right << std::setw(10) << m_sku;
-            std::cout << std::right << std::setw(6) << m_age;
-            std::cout << std::right << std::setw(12) << std::fixed << std::setprecision(2) << m_price;
+            cout << left << setw(15) << m_tname;
+            cout << right << setw(10) << m_sku;
+            cout << right << setw(6) << m_age;
+            cout << right << setw(12) << fixed << setprecision(2) << m_price;
 
             // If the toy is on sale, display "On Sale" after the price
             if (m_onSale) {
-                std::cout << std::right << std::setw(10) << "On Sale";
+                cout << right << setw(10) << "On Sale";
             }
             else
             {
-                std::cout << "       "; //When empty lines don't exist according to the OOP244 matrix compiler and requires 5 unnecessary spaces after the this output.
+                cout << "       "; //When empty lines don't exist according to the OOP244 matrix compiler and requires 5 unnecessary spaces after the this output.
             }
             // Add a new line at the end
-            std::cout << " " << std::endl; //When empty lines don't exist according to the OOP244 matrix compiler.
+            cout << " " << endl; //When empty lines don't exist according to the OOP244 matrix compiler.
         }
         // If the toy is invalid, display "Invalid Toy"
         else {
-            std::cout << "Invalid Toy" << std::endl;
+            cout << "Invalid Toy" << endl;
         }
 
     }
