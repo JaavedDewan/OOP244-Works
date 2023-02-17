@@ -93,10 +93,10 @@ ostream& SoccerTeam::display() const {
     }
     else {
         cout << left << setw(30) << m_teamName;
-        cout << right << setw(15) << fixed << setprecision(2) << m_fines;
+        cout << right << setw(6) << fixed << setprecision(2) << m_fines;
         cout << setw(6) << m_noFouls << setw(10);
         if (m_golas > 0) {
-            cout << m_golas << " w" << endl;
+            cout << m_golas << "w" << endl;
         }
         else {
             cout << m_golas << endl;
