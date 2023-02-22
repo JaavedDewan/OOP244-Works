@@ -50,16 +50,6 @@ namespace sdds {
         return m_noOfEggs == m_size;
     }
 
-    // Function to discard all the eggs in the egg carton
-    void EggCarton::discard() {
-        m_noOfEggs = 0;
-    }
-
-    // Function to fill the egg carton with the maximum number of eggs
-    void EggCarton::fill() {
-        m_noOfEggs = m_size;
-    }
-
     // Function to display the contents of the egg carton (or a message indicating that it is broken) to an output stream
     ostream& EggCarton::display(ostream& ostr) const {
         // Check if the egg carton is not broken
