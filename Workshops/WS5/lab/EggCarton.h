@@ -28,8 +28,6 @@ namespace sdds {
         void setBroken();
         bool isEmpty() const;
         bool isFull() const;
-        void discard();
-        void fill();
         ostream& displayCarton(int size, int noOfEggs, bool jumbo, ostream& ostr)const;
     public:
         //constructor

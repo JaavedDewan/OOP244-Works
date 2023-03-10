@@ -1,0 +1,10 @@
+This workshop helped us continue to practice using constructors, destructors as well as making use of the
+set functions from the iomanip library. The lab section of the workshop isn't complete as I wasn't able to 
+figure out the correlation as to how I should make the match function retun an empty state along with remembering
+the alterations to the new data scores for the next loop. Thankfully, the diy portion of the workshop was
+more straight forward as we are not complete restricted to certain functions and have free reign on how we
+can create this code. Furthermore, the instructions for the diy were more clear compared to the lab and especially
+the case with the lab asking for files that do not exist or rather was altered for this semester but seems to not
+be altered in the submission matrix.Finally, this workshop did not need many module files which I am assuming is
+a basic version for us to get ready for something larger in the next one. I really hope the next one will give
+more freedom as to how we can code the program like this one in the diy.
