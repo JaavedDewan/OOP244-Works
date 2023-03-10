@@ -1,0 +1,6 @@
+In this workshop, we have learned and practiced more regarding operators, istream, ostream, cin and cout, constructors as well as overloading each. 
+Unlike the previous workshop, we are almost giving free reign in how we make our solution. 
+The only code provided was the sort() and countLine() functions. 
+Furthermore, we followed a method of saving an instance before wiping or deallocating. 
+This is something that would have been very helpful for workshop 4 which I have understand now in this workshop. 
+There isn’t too much to say about this workshop as it has sort of been the same as the previous three workshops but with different functions such as average, minimum and maximum.
