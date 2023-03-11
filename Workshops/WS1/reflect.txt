@@ -1,0 +1,20 @@
+/*
+*****************************************************************************
+<assessment name example: Workshop - #1 (Part-2)>
+Full Name : Jaaved Dewan
+Student ID#: 126045178
+Email : jdewan@myseneca.ca or jilred15@gmail.com
+Section : NAA
+Completed on: 01/25/23
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+I learned quite a lot from this workshop considering I started the course late. I learned and refreshed myself with various concepts. This includes bool for true or false statements, using  a 
+different way to input and output with cin and cout from the std namespace. There are other functions such as erase(), begin(), end() and algorithm's remove_if() which really help with finding and clearing 
+out information while looking at strings or data structures. Finally, I have learned how to add namespace to functions from a namespace by adding “sdds::” as a prefix as well as creating it in 
+the header file. There is also declaring global variables as well as externalizing them as well. Finally, I learned ways to compress functions to be smaller or if there are cases where three 
+functions seem like they can fit into one like my DisplayGPA function instead of a separate one for each operation.
