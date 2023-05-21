@@ -1,0 +1,21 @@
+/*
+*****************************************************************************
+Workshop - #1 (Part-2)
+Full Name : Jaaved Dewan
+Student ID#: 126045178
+Email : jdewan@myseneca.ca or jilred15@gmail.com
+Section : NEE
+Completed on: 05/20/23
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+This workshop helped me understand the basics of sorting roles of a code into parts called modules. 
+This helps in organizing the code to make it more readable as well as allowing it to be secure. 
+This workshop also gives a slight introduction to overloading functions. 
+This is especially the case for the “diy” portion as we are creating functions at the most basic level without any libraries as well as creating functions are the are similar in function but have different number of parameters. 
+Furthermore, this workshop is also in the form of a review or warm up for IPC144 with the basics of C language being used to some degree while also learning an introduction of C++ and the new tools it provides. 
+These tools include the “Input Output Stream” and the “Input Output Manipulation” libraries. 
+Finally, this also teaches the importance of adding namespaces to provide security to our code.
