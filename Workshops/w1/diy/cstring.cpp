@@ -203,23 +203,21 @@ void sdds::strCat(char* des, const char* src)
 	// des: Pointer to the destination character array
 	// src: Pointer to the source character array (const, indicating it will not be modified)
 
-	// Iterate through the destination string until the null character ('\0') is encountered
-	while (*des != '\0') {
-		// Move to the next character in the destination string
-		des++;
+	// Find the end of the destination string
+	char* desEnd = des;
+	while (*desEnd != '\0') {
+		desEnd++;
 	}
 
-	// Copy the characters from the source string to the end of the destination string
+	// Append the characters from the source string to the end of the destination string
 	while (*src != '\0') {
-		// Append the current character from the source string to the destination string
-		*des = *src;
-
-		// Move to the next character in both the source and destination strings
-		des++;
+		*desEnd = *src;
+		desEnd++;
 		src++;
 	}
 
-	// Append the null character ('\0') to the end of the concatenated string
-	*des = '\0';
+	// Append the null character to the end of the concatenated string
+	*desEnd = '\0';
 }
+
 
