@@ -192,7 +192,7 @@ const char* sdds::strStr(const char* str1, const char* str2)
 		str1++;
 	}
 
-	// No match found, return nullptr
+	// No match found, return nullptr.
 	return nullptr;
 }
 
