@@ -42,31 +42,20 @@ void sdds::strCpy(char* des, const char* src)
 // of the characters copied is less than "len"
 void sdds::strnCpy(char* des, const char* src, int len)
 {
-	// des: Pointer to the destination character array
-	// src: Pointer to the source character array (const, indicating it will not be modified)
-	// len: The maximum number of characters to copy
+    int i;
 
-	// Iterate through the source string until either len characters are copied or the null character ('\0') is encountered
-	while (len > 0 && *src != '\0') {
-		// Copy the current character from the source string to the destination string
-		*des = *src;
+    // Iterate through the source string until either len characters are copied or the null character ('\0') is encountered
+    for (i = 0; i < len && src[i] != '\0'; i++) {
+        // Copy the current character from the source string to the destination string
+        des[i] = src[i];
+    }
 
-		// Move to the next character in both source and destination strings
-		des++;
-		src++;
-		len--;
-	}
-
-	// If len is greater than zero, pad the remaining characters in the destination string with null characters ('\0')
-	while (len > 0) {
-		*des = '\0';
-		des++;
-		len--;
-	}
-
-	// Append the null character ('\0') to the end of the destination string
-	*des = '\0';
+    // If len is greater than zero and a null character was encountered in the source string before reaching len, pad the remaining characters in the destination string with null characters ('\0')
+    for (; i < len; i++) {
+        des[i] = '\0';
+    }
 }
+
 
 
 
