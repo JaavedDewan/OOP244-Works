@@ -65,34 +65,28 @@ void sdds::strnCpy(char* des, const char* src, int len)
 // return < 0 if s1 < s2
 int sdds::strCmp(const char* s1, const char* s2)
 {
-    // s1: Pointer to the first character array (const, indicating it will not be modified)
-    // s2: Pointer to the second character array (const, indicating it will not be modified)
+	// s1: Pointer to the first character array (const, indicating it will not be modified)
+	// s2: Pointer to the second character array (const, indicating it will not be modified)
 
-    int result = 0;
+	int result = 0;
 
-    // Iterate through the strings until a mismatch is found or the null character ('\0') is encountered
-    while (*s1 != '\0' && *s2 != '\0') {
-        // Compare the current characters
-        if (*s1 != *s2) {
-            // Update the result to the difference between the ASCII values of the mismatched characters
-            result = *s1 - *s2;
-            break;
-        }
+	// Iterate through the strings until a mismatch is found or the null character ('\0') is encountered
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2) {
+		// Move to the next character in both strings
+		s1++;
+		s2++;
+	}
 
-        // Move to the next character in both strings
-        s1++;
-        s2++;
-    }
+	// If the result is still 0, it means the strings match up to the null character.
+	// If both strings end at the same time (null character encountered), return 0.
+	// Otherwise, return the difference in length (ASCII value) between the remaining characters.
+	if (result == 0) {
+		result = *s1 - *s2;
+	}
 
-    // If the result is still 0, it means the strings match up to the null character.
-    // If both strings end at the same time (null character encountered), return 0.
-    // Otherwise, return the difference in length (ASCII value) between the remaining characters.
-    if (result == 0) {
-        result = *s1 - *s2;
-    }
-
-    return result;
+	return result;
 }
+
 
 
 
@@ -101,21 +95,10 @@ int sdds::strCmp(const char* s1, const char* s2)
 // return < 0 if s1 < s2
 int sdds::strnCmp(const char* s1, const char* s2, int len)
 {
-	// s1: Pointer to the first character array (const, indicating it will not be modified)
-	// s2: Pointer to the second character array (const, indicating it will not be modified)
-	// len: The maximum number of characters to compare
-
 	int result = 0;
 
 	// Iterate through the strings until either len characters are compared or the null character ('\0') is encountered
-	while (len > 0 && *s1 != '\0' && *s2 != '\0') {
-		// Compare the current characters
-		if (*s1 != *s2) {
-			// Return the difference between the ASCII values of the mismatched characters
-			result = *s1 - *s2;
-			break;
-		}
-
+	while (len > 0 && *s1 != '\0' && *s2 != '\0' && *s1 == *s2) {
 		// Move to the next character in both strings
 		s1++;
 		s2++;
@@ -131,8 +114,10 @@ int sdds::strnCmp(const char* s1, const char* s2, int len)
 	else {
 		result = *s1 - *s2;
 	}
+
 	return result;
 }
+
 
 
 // returns the length of the C-string in characters
@@ -171,33 +156,35 @@ const char* sdds::strStr(const char* str1, const char* str2)
 		// Empty second string, return the original string pointer
 		result = str1;
 	}
+	else {
+		// Iterate through the first string until the null character ('\0') is encountered
+		while (*str1 != '\0' && result == nullptr) {
+			// Initialize pointers to track the current position in the first string and second string
+			const char* ptr1 = str1;
+			const char* ptr2 = str2;
 
-	// Iterate through the first string until the null character ('\0') is encountered
-	while (*str1 != '\0') {
-		// Initialize pointers to track the current position in the first string and second string
-		const char* ptr1 = str1;
-		const char* ptr2 = str2;
+			// Iterate through the first and second string characters, comparing them
+			while (*ptr2 != '\0' && *ptr1 == *ptr2) {
+				// Move to the next character in both the first and second string
+				ptr1++;
+				ptr2++;
+			}
 
-		// Iterate through the first and second string characters, comparing them
-		while (*ptr2 != '\0' && *ptr1 == *ptr2) {
-			// Move to the next character in both the first and second string
-			ptr1++;
-			ptr2++;
+			// If the second string pointer reaches the null character, a match is found
+			if (*ptr2 == '\0') {
+				// Return the address of the first occurrence of the second string in the first string
+				result = str1;
+			}
+
+			// Move to the next character in the first string for the next iteration
+			str1++;
 		}
-
-		// If the second string pointer reaches the null character, a match is found
-		if (*ptr2 == '\0') {
-			// Return the address of the first occurrence of the second string in the first string
-			result = str1;
-			break; // Exit the loop if a match is found
-		}
-
-		// Move to the next character in the first string for the next iteration
-		str1++;
 	}
 
 	return result;
 }
+
+
 
 
 

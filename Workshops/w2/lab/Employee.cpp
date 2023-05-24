@@ -85,7 +85,6 @@ namespace sdds {
                    employees = nullptr;
                    noOfEmployees = 0;
                    ok = false;
-                   break;
                }
                else {
                    ok = true; // Set ok to true if all records are successfully loaded
