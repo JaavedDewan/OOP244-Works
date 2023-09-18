@@ -1,11 +1,11 @@
 /*
 *****************************************************************************
-Project - Milestone 2
+Project - Milestone 5
 Full Name : Jaaved Dewan
 Student ID#: 126045178
 Email : jdewan@myseneca.ca or jilred15@gmail.com
 Section : NEE
-Completed on: 07/19/23
+Completed on: 08/06/23
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
 shared with any other student or 3rd party content provider. This submitted
@@ -214,7 +214,7 @@ namespace sdds {
             cout << "Publication added\n";
         }
         else if (!publicationAdded) {
-            cout << "Failed to add publication!\n";
+            //cout << "Failed to add publication!\n";
             delete p;
         }
     }
@@ -238,17 +238,19 @@ namespace sdds {
         // Call the search() method to find the all publication
         int ref = search(1, type);
 
-        cout << *getPub(ref) << endl;
-        // Ask for user confirmation before proceeding to remove the publication
-        if (confirm("Remove this publication from the library?"))
-        {
-            // If the user confirms, set the m_changed flag to true
-            m_changed = true;
+        if (ref != 0) {
+            cout << *getPub(ref) << endl;
+            // Ask for user confirmation before proceeding to remove the publication
+            if (confirm("Remove this publication from the library?"))
+            {
+                // If the user confirms, set the m_changed flag to true
+                m_changed = true;
 
-            getPub(ref)->setRef(0);
+                getPub(ref)->setRef(0);
 
-            // Print a message to confirm that the publication was removed
-            cout << "Publication removed" << endl;
+                // Print a message to confirm that the publication was removed
+                cout << "Publication removed" << endl;
+            }
         }
     }
 
